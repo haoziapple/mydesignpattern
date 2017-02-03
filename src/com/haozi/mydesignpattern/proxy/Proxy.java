@@ -15,13 +15,13 @@ public class Proxy implements Subject
 	// 默认被代理者
 	public Proxy()
 	{
-		this.subject = new Proxy();
+		this.subject = new RealSubject();
 	}
 
 	// 通过构造函数传递代理者
 	public Proxy(Object... objects)
 	{
-
+		this.subject = (Subject) objects[0];
 	}
 
 	@Override
@@ -35,12 +35,12 @@ public class Proxy implements Subject
 	// 预处理
 	private void before()
 	{
-		// 类似于Spring AOP的实现
+		System.out.println("预处理，在被代理者真实方法前执行");
 	}
 
 	// 善后处理
 	private void after()
 	{
-
+		System.out.println("善后处理，在被代理者真实方法后执行");
 	}
 }

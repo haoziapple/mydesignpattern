@@ -4,13 +4,13 @@ import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 
 /**
- * @className:com.haozi.mydesignpattern.proxy.dproxy.GamePlayIH
- * @description:动态代理类
+ * @className:com.haozi.mydesignpattern.proxy.dproxy.MyInvocationHandler
+ * @description:动态代理Handler类
  * @version:v1.0.0
  * @date:2017年1月25日 下午5:24:44
  * @author:WangHao
  */
-public class GamePlayIH implements InvocationHandler
+public class MyInvocationHandler implements InvocationHandler
 {
 
 	// 被代理者
@@ -19,7 +19,7 @@ public class GamePlayIH implements InvocationHandler
 	Object obj = null;
 
 	// 通过构造函数指定代理
-	public GamePlayIH(Object _obj)
+	public MyInvocationHandler(Object _obj)
 	{
 		this.obj = _obj;
 	}
