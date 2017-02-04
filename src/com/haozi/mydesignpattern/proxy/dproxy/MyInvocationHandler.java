@@ -12,11 +12,8 @@ import java.lang.reflect.Method;
  */
 public class MyInvocationHandler implements InvocationHandler
 {
-
-	// 被代理者
-	Class cls = null;
 	// 被代理的实例
-	Object obj = null;
+	private Object obj = null;
 
 	// 通过构造函数指定代理
 	public MyInvocationHandler(Object _obj)
@@ -27,6 +24,8 @@ public class MyInvocationHandler implements InvocationHandler
 	@Override
 	public Object invoke(Object proxy, Method method, Object[] args) throws Throwable
 	{
+		// 执行被代理的方法
+		System.out.println("MyInvocationHandler执行被代理的方法");
 		Object result = method.invoke(this.obj, args);
 		return result;
 	}
