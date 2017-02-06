@@ -14,6 +14,7 @@ public class CloneTest
 	{
 		public String name;
 
+		@Override
 		public Object clone()
 		{
 			ObjectA o = null;
@@ -30,6 +31,7 @@ public class CloneTest
 		}
 	}
 
+	// 原型模式就是通过拷贝原型创建新的对象，而不是使用new方法
 	public static void main(String[] args)
 	{
 		ObjectA a = new CloneTest().new ObjectA();
