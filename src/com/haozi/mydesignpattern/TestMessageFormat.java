@@ -41,5 +41,6 @@ public class TestMessageFormat
 	public static void main(String[] args)
 	{
 		testMsgDate();
+		testMsgTypes();
 	}
 }
